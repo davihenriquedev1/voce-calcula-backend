@@ -18,9 +18,13 @@ export const defineExchangeRateJobs = async (agenda: Agenda) => {
     agenda.define(jobName, async () => {
         console.log(`[${jobName}] running update...`);
         await updateExchangeRates();
+
+        job.attrs.lastRunAt = new Date();
+        
+        await job.save();
     });
 
-    const job = agenda.create(jobName,{});
+    const job = agenda.create(jobName, {createdAt: new Date()});
     job.repeatEvery('0 9,12,15 * * 1-5', {
         timezone: 'America/New_York'
     });
