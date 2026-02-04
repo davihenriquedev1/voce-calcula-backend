@@ -1,8 +1,8 @@
 # Backend – Você calcula
 
-Backend desenvolvido em **Node.js + TypeScript**, estruturado seguindo o padrão **MVC (Model–View–Controller)**, com foco em organização, separação de responsabilidades e facilidade de manutenção.
+Backend desenvolvido em **Node.js + TypeScript**, estruturado em camadas, inspirado no padrão MVC, com separação clara entre controllers, services e models, com foco em organização, separação de responsabilidades e facilidade de manutenção.
 
-### Arquitetura (MVC)
+### Arquitetura em camadas
 
 * **Models**: responsáveis pela estrutura e persistência dos dados no MongoDB
 * **Services**: regras de negócio e integrações externas (API de câmbio)
