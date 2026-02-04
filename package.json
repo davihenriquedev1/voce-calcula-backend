@@ -1,0 +1,31 @@
+{
+  "name": "voce-calcula-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "/src/server.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -e ts,json,mustache src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^24.10.10",
+    "@types/validator": "^13.15.2",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "agenda": "^5.0.0",
+    "axios": "^1.13.4",
+    "dotenv": "^17.1.0",
+    "express": "^5.1.0",
+    "mongodb": "^6.17.0",
+    "mongoose": "^8.16.4",
+    "validator": "^13.15.26"
+  }
+}
