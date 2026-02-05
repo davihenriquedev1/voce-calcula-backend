@@ -21,6 +21,8 @@ async function startServer() {
     server.use((req: Request, res: Response) => {
       res.status(404).send('Page not found!');
     });
+
+    server.set('trust proxy', 1);
     
     const PORT = process.env.PORT;
     
