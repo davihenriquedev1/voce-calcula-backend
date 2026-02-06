@@ -31,7 +31,11 @@ export const updateExchangeRates = async () => {
             );
       
             const wasModified = updated.modifiedCount > 0 || updated.upsertedCount > 0;
-            console.log("Successfully updated exchange rates in the database.");
+            if (wasModified) {
+                console.log("Exchange rates updated");
+            } else {
+                console.log("Exchange rates already up to date");
+            }
             return { ok: true, updated: wasModified};
 
         } catch (dbErr) {
